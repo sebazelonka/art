@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>This is art</title>
+  </head>
+  <body>
+    <nav>
+      <h1>This is art</h1>
+      <button id="openAbout">About the project</button>
+    </nav>
+    <dialog id="about">
+      <header>
+        <h2>$1 per pixel</h2>
+        <button id="closeAbout">Close the dialog</button>
+      </header>
+      <p>
+        This is a project where you can buy pixels for $1 each. You can buy as
+        many pixels as you want, and you can draw whatever you want. The only
+        rule is that you can't buy more than 10 pixels at a time. Each "pixel"
+        is 10x10 pixels in size and you can customize the color of it.
+      </p>
+      <p>
+        The goal for this project is to create an image from all the different
+        pixels working togheter in a 1280 x 720px canvas.
+      </p>
+
+      contact me at
+    </dialog>
+
+    <main>
+      <section class="canvas"></section>
+    </main>
+    <script>
+      const openButton = document.querySelector("#openAbout");
+      const dialog = document.querySelector("#about");
+      const closeButton = document.querySelector("#closeAbout");
+
+      closeButton.addEventListener("click", () => {
+        dialog.close();
+      });
+
+      openButton.addEventListener("click", () => dialog.showModal());
+      openButton.addEventListener("click", () => console.log("clicked"));
+    </script>
+  </body>
+</html>
